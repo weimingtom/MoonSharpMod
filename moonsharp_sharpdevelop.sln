@@ -1,0 +1,18 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+# SharpDevelop 4.4
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "moonsharp_sharpdevelop", "moonsharp_sharpdevelop.csproj", "{EBB71ABA-4116-4D33-BB74-6B351E9B00BE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EBB71ABA-4116-4D33-BB74-6B351E9B00BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBB71ABA-4116-4D33-BB74-6B351E9B00BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBB71ABA-4116-4D33-BB74-6B351E9B00BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBB71ABA-4116-4D33-BB74-6B351E9B00BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+EndGlobal
