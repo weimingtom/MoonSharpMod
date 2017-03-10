@@ -11,6 +11,7 @@ using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 using MoonSharp.Interpreter;
 using MoonSharp.Interpreter.REPL;
+using System.Diagnostics;
 
 namespace MoonSharpSL5ReplDemo
 {
@@ -22,6 +23,7 @@ namespace MoonSharpSL5ReplDemo
 		public MainPage()
 		{
 			InitializeComponent();
+            Debug.WriteLine("hello===============");
 		}
 
 		private void UserControl_Loaded(object sender, RoutedEventArgs e)

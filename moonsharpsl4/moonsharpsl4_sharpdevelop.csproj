@@ -1,0 +1,385 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectGuid>{C4AC82E7-3E19-452A-B59B-AB1EB84CFD87}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>Library</OutputType>
+    <RootNamespace>moonsharpsl4_sharpdevelop</RootNamespace>
+    <AssemblyName>moonsharpsl4_sharpdevelop</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <ProjectTypeGuids>{A1591282-1198-4647-A2B1-27E5FF5F6F3B};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures />
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>moonsharpsl4_sharpdevelop.xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>MoonSharpSL5ReplDemo.App</SilverlightAppEntry>
+    <TestPageFileName>TestPage.html</TestPageFileName>
+    <CreateTestPage>true</CreateTestPage>
+    <ValidateXaml>true</ValidateXaml>
+    <UsePlatformExtensions>false</UsePlatformExtensions>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+    <NoStdLib>True</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <NoWin32Manifest>False</NoWin32Manifest>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <BaseAddress>4194304</BaseAddress>
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <FileAlignment>4096</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <Optimize>False</Optimize>
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;PCL</DefineConstants>
+    <BaseIntermediateOutputPath>obj\</BaseIntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>False</DebugSymbols>
+    <DebugType>None</DebugType>
+    <Optimize>True</Optimize>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <DefineConstants>TRACE;SILVERLIGHT</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="system" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Windows" />
+    <Reference Include="System.Windows.Browser" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainPage.xaml.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="src\AsyncExtensions.cs" />
+    <Compile Include="src\CodeAnalysis\AstNode.cs" />
+    <Compile Include="src\Compatibility\Attributes.cs" />
+    <Compile Include="src\Compatibility\Framework.cs" />
+    <Compile Include="src\Compatibility\Frameworks\Base\FrameworkBase.cs" />
+    <Compile Include="src\Compatibility\Frameworks\Base\FrameworkClrBase.cs" />
+    <Compile Include="src\Compatibility\Frameworks\Base\FrameworkReflectionBase.cs" />
+    <Compile Include="src\Compatibility\Frameworks\FrameworkCLR.cs" />
+    <Compile Include="src\Compatibility\Frameworks\FrameworkCore.cs" />
+    <Compile Include="src\Compatibility\Frameworks\FrameworkPCL.cs" />
+    <Compile Include="src\Compatibility\Frameworks\FrameworkWin8.cs" />
+    <Compile Include="src\Compatibility\Stopwatch.cs" />
+    <Compile Include="src\CoreLib\BasicModule.cs" />
+    <Compile Include="src\CoreLib\Bit32Module.cs" />
+    <Compile Include="src\CoreLib\CoroutineModule.cs" />
+    <Compile Include="src\CoreLib\DebugModule.cs" />
+    <Compile Include="src\CoreLib\DynamicModule.cs" />
+    <Compile Include="src\CoreLib\ErrorHandlingModule.cs" />
+    <Compile Include="src\CoreLib\IoModule.cs" />
+    <Compile Include="src\CoreLib\IO\BinaryEncoding.cs" />
+    <Compile Include="src\CoreLib\IO\FileUserData.cs" />
+    <Compile Include="src\CoreLib\IO\FileUserDataBase.cs" />
+    <Compile Include="src\CoreLib\IO\StandardIOFileUserDataBase.cs" />
+    <Compile Include="src\CoreLib\IO\StreamFileUserDataBase.cs" />
+    <Compile Include="src\CoreLib\JsonModule.cs" />
+    <Compile Include="src\CoreLib\LoadModule.cs" />
+    <Compile Include="src\CoreLib\MathModule.cs" />
+    <Compile Include="src\CoreLib\MetaTableModule.cs" />
+    <Compile Include="src\CoreLib\OsSystemModule.cs" />
+    <Compile Include="src\CoreLib\OsTimeModule.cs" />
+    <Compile Include="src\CoreLib\StringLib\KopiLua_StrLib.cs" />
+    <Compile Include="src\CoreLib\StringLib\StringRange.cs" />
+    <Compile Include="src\CoreLib\StringModule.cs" />
+    <Compile Include="src\CoreLib\TableIteratorsModule.cs" />
+    <Compile Include="src\CoreLib\TableModule.cs" />
+    <Compile Include="src\DataStructs\Extension_Methods.cs" />
+    <Compile Include="src\DataStructs\FastStack.cs" />
+    <Compile Include="src\DataStructs\FastStackDynamic.cs" />
+    <Compile Include="src\DataStructs\LinkedListIndex.cs" />
+    <Compile Include="src\DataStructs\MultiDictionary.cs" />
+    <Compile Include="src\DataStructs\ReferenceEqualityComparer.cs" />
+    <Compile Include="src\DataStructs\Slice.cs" />
+    <Compile Include="src\DataTypes\CallbackArguments.cs" />
+    <Compile Include="src\DataTypes\CallbackFunction.cs" />
+    <Compile Include="src\DataTypes\Closure.cs" />
+    <Compile Include="src\DataTypes\Coroutine.cs" />
+    <Compile Include="src\DataTypes\CoroutineState.cs" />
+    <Compile Include="src\DataTypes\DataType.cs" />
+    <Compile Include="src\DataTypes\DynValue.cs" />
+    <Compile Include="src\DataTypes\IScriptPrivateResource.cs" />
+    <Compile Include="src\DataTypes\RefIdObject.cs" />
+    <Compile Include="src\DataTypes\ScriptFunctionDelegate.cs" />
+    <Compile Include="src\DataTypes\SymbolRef.cs" />
+    <Compile Include="src\DataTypes\SymbolRefType.cs" />
+    <Compile Include="src\DataTypes\Table.cs" />
+    <Compile Include="src\DataTypes\TablePair.cs" />
+    <Compile Include="src\DataTypes\TailCallData.cs" />
+    <Compile Include="src\DataTypes\TypeValidationFlags.cs" />
+    <Compile Include="src\DataTypes\UserData.cs" />
+    <Compile Include="src\DataTypes\WellKnownSymbols.cs" />
+    <Compile Include="src\DataTypes\YieldRequest.cs" />
+    <Compile Include="src\Debugging\DebuggerAction.cs" />
+    <Compile Include="src\Debugging\DebuggerCaps.cs" />
+    <Compile Include="src\Debugging\DebugService.cs" />
+    <Compile Include="src\Debugging\IDebugger.cs" />
+    <Compile Include="src\Debugging\SourceCode.cs" />
+    <Compile Include="src\Debugging\SourceRef.cs" />
+    <Compile Include="src\Debugging\WatchItem.cs" />
+    <Compile Include="src\Debugging\WatchType.cs" />
+    <Compile Include="src\Diagnostics\PerformanceCounter.cs" />
+    <Compile Include="src\Diagnostics\PerformanceCounters\DummyPerformanceStopwatch.cs" />
+    <Compile Include="src\Diagnostics\PerformanceCounters\GlobalPerformanceStopwatch.cs" />
+    <Compile Include="src\Diagnostics\PerformanceCounters\IPerformanceStopwatch.cs" />
+    <Compile Include="src\Diagnostics\PerformanceCounters\PerformanceStopwatch.cs" />
+    <Compile Include="src\Diagnostics\PerformanceCounterType.cs" />
+    <Compile Include="src\Diagnostics\PerformanceResult.cs" />
+    <Compile Include="src\Diagnostics\PerformanceStatistics.cs" />
+    <Compile Include="src\Errors\DynamicExpressionException.cs" />
+    <Compile Include="src\Errors\InternalErrorException.cs" />
+    <Compile Include="src\Errors\InterpreterException.cs" />
+    <Compile Include="src\Errors\ScriptRuntimeException.cs" />
+    <Compile Include="src\Errors\SyntaxErrorException.cs" />
+    <Compile Include="src\Execution\DynamicExpression.cs" />
+    <Compile Include="src\Execution\InstructionFieldUsage.cs" />
+    <Compile Include="src\Execution\Scopes\BuildTimeScope.cs" />
+    <Compile Include="src\Execution\Scopes\BuildTimeScopeBlock.cs" />
+    <Compile Include="src\Execution\Scopes\BuildTimeScopeFrame.cs" />
+    <Compile Include="src\Execution\Scopes\ClosureContext.cs" />
+    <Compile Include="src\Execution\Scopes\IClosureBuilder.cs" />
+    <Compile Include="src\Execution\Scopes\LoopTracker.cs" />
+    <Compile Include="src\Execution\Scopes\RuntimeScopeBlock.cs" />
+    <Compile Include="src\Execution\Scopes\RuntimeScopeFrame.cs" />
+    <Compile Include="src\Execution\ScriptExecutionContext.cs" />
+    <Compile Include="src\Execution\ScriptLoadingContext.cs" />
+    <Compile Include="src\Execution\VM\ByteCode.cs" />
+    <Compile Include="src\Execution\VM\CallStackItem.cs" />
+    <Compile Include="src\Execution\VM\CallStackItemFlags.cs" />
+    <Compile Include="src\Execution\VM\ExecutionState.cs" />
+    <Compile Include="src\Execution\VM\Instruction.cs" />
+    <Compile Include="src\Execution\VM\OpCode.cs" />
+    <Compile Include="src\Execution\VM\OpCodeMetadataType.cs" />
+    <Compile Include="src\Execution\VM\Processor\DebugContext.cs" />
+    <Compile Include="src\Execution\VM\Processor\Processor.cs" />
+    <Compile Include="src\Execution\VM\Processor\Processor_BinaryDump.cs" />
+    <Compile Include="src\Execution\VM\Processor\Processor_Coroutines.cs" />
+    <Compile Include="src\Execution\VM\Processor\Processor_Debugger.cs" />
+    <Compile Include="src\Execution\VM\Processor\Processor_Errors.cs" />
+    <Compile Include="src\Execution\VM\Processor\Processor_IExecutionContext.cs" />
+    <Compile Include="src\Execution\VM\Processor\Processor_InstructionLoop.cs" />
+    <Compile Include="src\Execution\VM\Processor\Processor_Scope.cs" />
+    <Compile Include="src\Execution\VM\Processor\Processor_UtilityFunctions.cs" />
+    <Compile Include="src\Interop\Attributes\MoonSharpHiddenAttribute.cs" />
+    <Compile Include="src\Interop\Attributes\MoonSharpHideMemberAttribute.cs" />
+    <Compile Include="src\Interop\Attributes\MoonSharpPropertyAttribute.cs" />
+    <Compile Include="src\Interop\Attributes\MoonSharpUserDataAttribute.cs" />
+    <Compile Include="src\Interop\Attributes\MoonSharpUserDataMetamethodAttribute.cs" />
+    <Compile Include="src\Interop\Attributes\MoonSharpVisibleAttribute.cs" />
+    <Compile Include="src\Interop\BasicDescriptors\DispatchingUserDataDescriptor.cs" />
+    <Compile Include="src\Interop\BasicDescriptors\IMemberDescriptor.cs" />
+    <Compile Include="src\Interop\BasicDescriptors\IOptimizableDescriptor.cs" />
+    <Compile Include="src\Interop\BasicDescriptors\IOverloadableMemberDescriptor.cs" />
+    <Compile Include="src\Interop\BasicDescriptors\MemberDescriptorAccess.cs" />
+    <Compile Include="src\Interop\BasicDescriptors\ParameterDescriptor.cs" />
+    <Compile Include="src\Interop\Converters\ClrToScriptConversions.cs" />
+    <Compile Include="src\Interop\Converters\NumericConversions.cs" />
+    <Compile Include="src\Interop\Converters\ScriptToClrConversions.cs" />
+    <Compile Include="src\Interop\Converters\StringConversions.cs" />
+    <Compile Include="src\Interop\Converters\TableConversions.cs" />
+    <Compile Include="src\Interop\CustomConvertersCollection.cs" />
+    <Compile Include="src\Interop\DescriptorHelpers.cs" />
+    <Compile Include="src\Interop\IGeneratorUserDataDescriptor.cs" />
+    <Compile Include="src\Interop\InteropAccessMode.cs" />
+    <Compile Include="src\Interop\InteropRegistrationPolicy.cs" />
+    <Compile Include="src\Interop\IUserDataDescriptor.cs" />
+    <Compile Include="src\Interop\IUserDataMemberDescriptor.cs" />
+    <Compile Include="src\Interop\IUserDataType.cs" />
+    <Compile Include="src\Interop\IWireableDescriptor.cs" />
+    <Compile Include="src\Interop\LuaStateInterop\CharPtr.cs" />
+    <Compile Include="src\Interop\LuaStateInterop\LuaBase.cs" />
+    <Compile Include="src\Interop\LuaStateInterop\LuaBase_CLib.cs" />
+    <Compile Include="src\Interop\LuaStateInterop\LuaLBuffer.cs" />
+    <Compile Include="src\Interop\LuaStateInterop\LuaState.cs" />
+    <Compile Include="src\Interop\LuaStateInterop\Tools.cs" />
+    <Compile Include="src\Interop\PredefinedUserData\AnonWrapper.cs" />
+    <Compile Include="src\Interop\PredefinedUserData\EnumerableWrapper.cs" />
+    <Compile Include="src\Interop\PropertyTableAssigner.cs" />
+    <Compile Include="src\Interop\ProxyObjects\DelegateProxyFactory.cs" />
+    <Compile Include="src\Interop\ProxyObjects\IProxyFactory.cs" />
+    <Compile Include="src\Interop\ReflectionSpecialNames.cs" />
+    <Compile Include="src\Interop\RegistrationPolicies\AutomaticRegistrationPolicy.cs" />
+    <Compile Include="src\Interop\RegistrationPolicies\DefaultRegistrationPolicy.cs" />
+    <Compile Include="src\Interop\RegistrationPolicies\IRegistrationPolicy.cs" />
+    <Compile Include="src\Interop\RegistrationPolicies\PermanentRegistrationPolicy.cs" />
+    <Compile Include="src\Interop\StandardDescriptors\AutoDescribingUserDataDescriptor.cs" />
+    <Compile Include="src\Interop\StandardDescriptors\CompositeUserDataDescriptor.cs" />
+    <Compile Include="src\Interop\StandardDescriptors\EventFacade.cs" />
+    <Compile Include="src\Interop\StandardDescriptors\HardwiredDescriptors\DefaultValue.cs" />
+    <Compile Include="src\Interop\StandardDescriptors\HardwiredDescriptors\HardwiredMemberDescriptor.cs" />
+    <Compile Include="src\Interop\StandardDescriptors\HardwiredDescriptors\HardwiredMethodMemberDescriptor.cs" />
+    <Compile Include="src\Interop\StandardDescriptors\HardwiredDescriptors\HardwiredUserDataDescriptor.cs" />
+    <Compile Include="src\Interop\StandardDescriptors\MemberDescriptors\ArrayMemberDescriptor.cs" />
+    <Compile Include="src\Interop\StandardDescriptors\MemberDescriptors\DynValueMemberDescriptor.cs" />
+    <Compile Include="src\Interop\StandardDescriptors\MemberDescriptors\FunctionMemberDescriptorBase.cs" />
+    <Compile Include="src\Interop\StandardDescriptors\MemberDescriptors\ObjectCallbackMemberDescriptor.cs" />
+    <Compile Include="src\Interop\StandardDescriptors\ProxyUserDataDescriptor.cs" />
+    <Compile Include="src\Interop\StandardDescriptors\ReflectionMemberDescriptors\EventMemberDescriptor.cs" />
+    <Compile Include="src\Interop\StandardDescriptors\ReflectionMemberDescriptors\FieldMemberDescriptor.cs" />
+    <Compile Include="src\Interop\StandardDescriptors\ReflectionMemberDescriptors\MethodMemberDescriptor.cs" />
+    <Compile Include="src\Interop\StandardDescriptors\ReflectionMemberDescriptors\OverloadedMethodMemberDescriptor.cs" />
+    <Compile Include="src\Interop\StandardDescriptors\ReflectionMemberDescriptors\PropertyMemberDescriptor.cs" />
+    <Compile Include="src\Interop\StandardDescriptors\ReflectionMemberDescriptors\ValueTypeDefaultCtorMemberDescriptor.cs" />
+    <Compile Include="src\Interop\StandardDescriptors\StandardEnumUserDataDescriptor.cs" />
+    <Compile Include="src\Interop\StandardDescriptors\StandardGenericsUserDataDescriptor.cs" />
+    <Compile Include="src\Interop\StandardDescriptors\StandardUserDataDescriptor.cs" />
+    <Compile Include="src\Interop\UserDataMemberType.cs" />
+    <Compile Include="src\Interop\UserDataRegistries\ExtensionMethodsRegistry.cs" />
+    <Compile Include="src\Interop\UserDataRegistries\TypeDescriptorRegistry.cs" />
+    <Compile Include="src\IO\BinDumpBinaryReader.cs" />
+    <Compile Include="src\IO\BinDumpBinaryWriter.cs" />
+    <Compile Include="src\IO\UndisposableStream.cs" />
+    <Compile Include="src\LinqHelpers.cs" />
+    <Compile Include="src\Loaders\EmbeddedResourcesScriptLoader.cs" />
+    <Compile Include="src\Loaders\FileSystemScriptLoader.cs" />
+    <Compile Include="src\Loaders\InvalidScriptLoader.cs" />
+    <Compile Include="src\Loaders\IScriptLoader.cs" />
+    <Compile Include="src\Loaders\ScriptLoaderBase.cs" />
+    <Compile Include="src\Loaders\UnityAssetsScriptLoader.cs" />
+    <Compile Include="src\Modules\CoreModules.cs" />
+    <Compile Include="src\Modules\ModuleRegister.cs" />
+    <Compile Include="src\Modules\MoonSharpModuleAttribute.cs" />
+    <Compile Include="src\Modules\MoonSharpModuleConstantAttribute.cs" />
+    <Compile Include="src\Modules\MoonSharpModuleMethodAttribute.cs" />
+    <Compile Include="src\NameSpace_XmlHelp.cs" />
+    <Compile Include="src\Options\ColonOperatorBehaviour.cs" />
+    <Compile Include="src\Platforms\DotNetCorePlatformAccessor.cs" />
+    <Compile Include="src\Platforms\IPlatformAccessor.cs" />
+    <Compile Include="src\Platforms\LimitedPlatformAccessor.cs" />
+    <Compile Include="src\Platforms\PlatformAccessorBase.cs" />
+    <Compile Include="src\Platforms\PlatformAutoDetector.cs" />
+    <Compile Include="src\Platforms\StandardFileType.cs" />
+    <Compile Include="src\Platforms\StandardPlatformAccessor.cs" />
+    <Compile Include="src\REPL\ReplHistoryNavigator.cs" />
+    <Compile Include="src\REPL\ReplInterpreter.cs" />
+    <Compile Include="src\REPL\ReplInterpreterScriptLoader.cs" />
+    <Compile Include="src\Script.cs" />
+    <Compile Include="src\ScriptGlobalOptions.cs" />
+    <Compile Include="src\ScriptOptions.cs" />
+    <Compile Include="src\Serialization\Json\JsonNull.cs" />
+    <Compile Include="src\Serialization\Json\JsonTableConverter.cs" />
+    <Compile Include="src\Serialization\ObjectValueConverter.cs" />
+    <Compile Include="src\Serialization\SerializationExtensions.cs" />
+    <Compile Include="src\Tree\Expressions\AdjustmentExpression.cs" />
+    <Compile Include="src\Tree\Expressions\BinaryOperatorExpression.cs" />
+    <Compile Include="src\Tree\Expressions\DynamicExprExpression.cs" />
+    <Compile Include="src\Tree\Expressions\ExprListExpression.cs" />
+    <Compile Include="src\Tree\Expressions\FunctionCallExpression.cs" />
+    <Compile Include="src\Tree\Expressions\FunctionDefinitionExpression.cs" />
+    <Compile Include="src\Tree\Expressions\IndexExpression.cs" />
+    <Compile Include="src\Tree\Expressions\LiteralExpression.cs" />
+    <Compile Include="src\Tree\Expressions\SymbolRefExpression.cs" />
+    <Compile Include="src\Tree\Expressions\TableConstructor.cs" />
+    <Compile Include="src\Tree\Expressions\UnaryOperatorExpression.cs" />
+    <Compile Include="src\Tree\Expression_.cs" />
+    <Compile Include="src\Tree\Fast_Interface\Loader_Fast.cs" />
+    <Compile Include="src\Tree\IVariable.cs" />
+    <Compile Include="src\Tree\Lexer\Lexer.cs" />
+    <Compile Include="src\Tree\Lexer\LexerUtils.cs" />
+    <Compile Include="src\Tree\Lexer\Token.cs" />
+    <Compile Include="src\Tree\Lexer\TokenType.cs" />
+    <Compile Include="src\Tree\Loop.cs" />
+    <Compile Include="src\Tree\NodeBase.cs" />
+    <Compile Include="src\Tree\Statement.cs" />
+    <Compile Include="src\Tree\Statements\AssignmentStatement.cs" />
+    <Compile Include="src\Tree\Statements\BreakStatement.cs" />
+    <Compile Include="src\Tree\Statements\ChunkStatement.cs" />
+    <Compile Include="src\Tree\Statements\CompositeStatement.cs" />
+    <Compile Include="src\Tree\Statements\EmptyStatement.cs" />
+    <Compile Include="src\Tree\Statements\ForEachLoopStatement.cs" />
+    <Compile Include="src\Tree\Statements\ForLoopStatement.cs" />
+    <Compile Include="src\Tree\Statements\FunctionCallStatement.cs" />
+    <Compile Include="src\Tree\Statements\FunctionDefinitionStatement.cs" />
+    <Compile Include="src\Tree\Statements\GotoStatement.cs" />
+    <Compile Include="src\Tree\Statements\IfStatement.cs" />
+    <Compile Include="src\Tree\Statements\LabelStatement.cs" />
+    <Compile Include="src\Tree\Statements\RepeatStatement.cs" />
+    <Compile Include="src\Tree\Statements\ReturnStatement.cs" />
+    <Compile Include="src\Tree\Statements\ScopeBlockStatement.cs" />
+    <Compile Include="src\Tree\Statements\WhileStatement.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="MainPage.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\AppManifest.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="src" />
+    <Folder Include="src\CodeAnalysis" />
+    <Folder Include="src\Compatibility" />
+    <Folder Include="src\Compatibility\Frameworks" />
+    <Folder Include="src\Compatibility\Frameworks\Base" />
+    <Folder Include="src\CoreLib" />
+    <Folder Include="src\CoreLib\IO" />
+    <Folder Include="src\CoreLib\StringLib" />
+    <Folder Include="src\DataStructs" />
+    <Folder Include="src\DataTypes" />
+    <Folder Include="src\Debugging" />
+    <Folder Include="src\Diagnostics" />
+    <Folder Include="src\Diagnostics\PerformanceCounters" />
+    <Folder Include="src\Errors" />
+    <Folder Include="src\Execution" />
+    <Folder Include="src\Execution\Scopes" />
+    <Folder Include="src\Execution\VM" />
+    <Folder Include="src\Execution\VM\Processor" />
+    <Folder Include="src\Interop" />
+    <Folder Include="src\Interop\Attributes" />
+    <Folder Include="src\Interop\BasicDescriptors" />
+    <Folder Include="src\Interop\Converters" />
+    <Folder Include="src\Interop\LuaStateInterop" />
+    <Folder Include="src\Interop\PredefinedUserData" />
+    <Folder Include="src\Interop\ProxyObjects" />
+    <Folder Include="src\Interop\RegistrationPolicies" />
+    <Folder Include="src\Interop\StandardDescriptors" />
+    <Folder Include="src\Interop\StandardDescriptors\HardwiredDescriptors" />
+    <Folder Include="src\Interop\StandardDescriptors\MemberDescriptors" />
+    <Folder Include="src\Interop\StandardDescriptors\ReflectionMemberDescriptors" />
+    <Folder Include="src\Interop\UserDataRegistries" />
+    <Folder Include="src\IO" />
+    <Folder Include="src\Loaders" />
+    <Folder Include="src\Modules" />
+    <Folder Include="src\Options" />
+    <Folder Include="src\Platforms" />
+    <Folder Include="src\REPL" />
+    <Folder Include="src\Serialization" />
+    <Folder Include="src\Serialization\Json" />
+    <Folder Include="src\Tree" />
+    <Folder Include="src\Tree\Expressions" />
+    <Folder Include="src\Tree\Fast_Interface" />
+    <Folder Include="src\Tree\Lexer" />
+    <Folder Include="src\Tree\Statements" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight\v4.0\Microsoft.Silverlight.CSharp.targets" />
+</Project>

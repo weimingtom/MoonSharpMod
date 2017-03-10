@@ -251,5 +251,7 @@ paket-files/
 .idea/
 *.sln.iml
 
-bin/
-obj/
+moonsharp/bin/
+moonsharp/obj/
+moonsharpsl4/bin/
+moonsharpsl4/obj/
