@@ -11,7 +11,7 @@ http://www.icsharpcode.net/OpenSource/SD/Download/Default.aspx#SharpDevelop4x
 https://www.microsoft.com/en-US/download/details.aspx?id=7335  
 
 * In *.csproj file, notice SilverlightAppEntry, it's not shown in SharpDevelop project properties.  
-<pre>< SilverlightAppEntry >MoonSharpSL5ReplDemo.App< /SilverlightAppEntry ></pre>   
+<pre>&lt;SilverlightAppEntry&gt;MoonSharpSL5ReplDemo.App&lt;/SilverlightAppEntry&gt;</pre>   
 
 * Bugs, search below  
 <pre>//FIXME:since silverlight 5</pre>  
