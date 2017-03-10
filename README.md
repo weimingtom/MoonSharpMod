@@ -13,5 +13,9 @@ https://www.microsoft.com/en-US/download/details.aspx?id=7335
 * In *.csproj file, notice SilverlightAppEntry, it's not shown in SharpDevelop project properties.  
 <SilverlightAppEntry>MoonSharpSL5ReplDemo.App</SilverlightAppEntry>    
 
-* bugs, search below  
+* Bugs, search below  
 //FIXME:since silverlight 5  
+
+* Debug tools    
+Use Debugview, and Debug.WriteLine()      
+https://technet.microsoft.com/en-us/sysinternals/bb896647.aspx  
