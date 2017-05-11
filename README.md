@@ -19,3 +19,6 @@ https://www.microsoft.com/en-US/download/details.aspx?id=7335
 * Debug tools    
 Use Debugview, and Debug.WriteLine()      
 https://technet.microsoft.com/en-us/sysinternals/bb896647.aspx  
+
+## About Enum  
+https://msdn.microsoft.com/zh-cn/library/system.enum.getnames.aspx  
