@@ -45,11 +45,38 @@ namespace MoonSharp.Interpreter.Interop
 			IsUnsigned = ((UnderlyingType == typeof(byte)) || (UnderlyingType == typeof(ushort)) || (UnderlyingType == typeof(uint)) || (UnderlyingType == typeof(ulong)));
 			
 			//FIXME:since silverlight 5
-			//names = names ?? Enum.GetNames(this.Type);
-			//values = values ?? Enum.GetValues(this.Type).OfType<object>().ToArray();
-
+			names = names ?? GetNames(this.Type); //Enum.GetNames(this.Type);
+			values = values ?? GetValues(this.Type).OfType<object>().ToArray(); //Enum.GetValues(this.Type).OfType<object>().ToArray();
+			
 			FillMemberList(names, values);
 		}
+		
+		//FIXME:Enum.GetNames
+		//http://blog.csdn.net/gong_hui2000/article/details/5955708
+		//http://www.ithao123.cn/content-8497890.html
+		public static string[] GetNames(Type enumType)
+        {
+            if (!enumType.IsEnum)
+                throw new ArgumentException("Type '" + enumType.Name + "' is not an Enum.");
+
+            return enumType
+            	.GetFields() //BindingFlags.Public | BindingFlags.Static
+            	.Where(field => field.IsLiteral)
+                .Select(field => field.Name).ToArray();
+        }
+        
+		//FIXME:Enum.GetValues
+        public static Array GetValues(Type enumType)
+        {
+            if (!enumType.IsEnum)
+                throw new ArgumentException("Type '" + enumType.Name + "' is not an Enum.");
+
+            return enumType
+                .GetFields()
+                .Where(field => field.IsLiteral)
+            	.Select(field => field.GetValue(enumType)).ToArray();
+        }
+		
 
 		/// <summary>
 		/// Fills the member list.

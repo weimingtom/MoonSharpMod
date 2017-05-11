@@ -13,12 +13,10 @@ https://www.microsoft.com/en-US/download/details.aspx?id=7335
 * In *.csproj file, notice SilverlightAppEntry, it's not shown in SharpDevelop project properties.  
 <pre>&lt;SilverlightAppEntry&gt;MoonSharpSL5ReplDemo.App&lt;/SilverlightAppEntry&gt;</pre>   
 
-* Bugs, search below  
+* Old bugs, search below (fixed)  
 <pre>//FIXME:since silverlight 5</pre>  
+https://msdn.microsoft.com/zh-cn/library/system.enum.getnames.aspx  
 
 * Debug tools    
 Use Debugview, and Debug.WriteLine()      
 https://technet.microsoft.com/en-us/sysinternals/bb896647.aspx  
-
-## About Enum  
-https://msdn.microsoft.com/zh-cn/library/system.enum.getnames.aspx  
