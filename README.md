@@ -20,3 +20,7 @@ https://msdn.microsoft.com/zh-cn/library/system.enum.getnames.aspx
 * Debug tools    
 Use Debugview, and Debug.WriteLine()      
 https://technet.microsoft.com/en-us/sysinternals/bb896647.aspx  
+
+## About WPF project  
+* From moonsharpsl4, with some changes.  
+* Created in 2020.02.02  
